@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="{{carr.img.url}}" height="250" width="250">
+        </div>
+    <div class="col-md-6">
+        <b>{{carr.name}}<br></b>
+        {{carr.desc}}<br>
+        <a class="btn btn-warning" href="{% url 'webapp:update' carr.id %}">Edit</a>
+        <a class="btn btn-danger" href="{% url 'webapp:delete' carr.id %}">Delete</a>
+    </div>
+    </div>
+</div>
+
+
+
+
+
+{% endblock %}
